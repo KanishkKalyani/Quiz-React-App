@@ -1,0 +1,47 @@
+.info-wrapper {
+	width: 100%;
+	display: flex;
+	margin: 10px;
+	justify-content: space-around;
+	align-items: center;
+	color: orangered;
+	font-size: 23px;
+	font-weight: bold;
+}
+
+div > span {
+	margin: 10px;
+}
+
+.question {
+	text-align: center;
+	font-size: 30px;
+	margin: 20px;
+	color: rgb(4, 86, 0);
+	font-weight: bold;
+}
+
+ul {
+	list-style-image: url("https://img.icons8.com/android/24/000000/pen.png");
+}
+
+li > span {
+	cursor: pointer;
+	font-size: 30px;
+	margin: 15px;
+	font-weight: 600;
+}
+
+.options-wrapper {
+	width: 100%;
+	color: #ca0000;
+}
+
+li > span:hover {
+	opacity: 0.8;
+	color: yellow;
+}
+
+li > span:active {
+	color: #00ff00;
+}

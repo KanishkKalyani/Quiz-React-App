@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import QuizHeader from "./QuizHeader.js";
+import QuizBody from "./QuizBody.js";
+import Instructions from "./Instructions.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			start: false,
+		};
+	}
+
+	start = () => {
+		this.setState({ start: true });
+	};
+
+	render() {
+		if (!this.state.start) {
+			return <Instructions start={this.start}></Instructions>;
+		} else {
+			return (
+				<div className="App">
+					<QuizHeader></QuizHeader>
+					<QuizBody></QuizBody>
+				</div>
+			);
+		}
+	}
 }
 
 export default App;
